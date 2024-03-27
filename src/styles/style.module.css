@@ -1,37 +1,10 @@
-/* font-family: "Saira Stencil One", sans-serif; */
 .mainContainer {
   padding: 0 7%;
 }
-.listProductsContainer {
-  display: flex;
-  justify-content: space-between;
+
+.listProducts {
   margin-top: 20px;
-}
-.listSelect {
   display: flex;
-  list-style: none;
-  align-items: center;
-}
-
-.listSelect li {
-  font-family: "Saira Stencil One", sans-serif;
-  font-weight: lighter;
-  color: rgba(115, 115, 128, 1);
-  font-size: 12px;
-  margin: 10px;
-  cursor: pointer;
-}
-
-.listSelect li:hover {
-  color: black;
-  border-bottom: 2px solid rgba(255, 165, 133, 1);
-}
-
-.select {
-  padding: 8px;
-  font-size: 14px;
-  border: none;
-  background-color: transparent;
-  color: rgba(115, 115, 128, 1);
-  cursor: pointer;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }

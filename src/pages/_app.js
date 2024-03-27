@@ -1,4 +1,10 @@
-import styles from "../styles/globals.css";
+import "../styles/globals.css";
+import { ProductsProvider } from "../contexts/products";
+
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <ProductsProvider>
+      <Component {...pageProps} />;
+    </ProductsProvider>
+  );
 }

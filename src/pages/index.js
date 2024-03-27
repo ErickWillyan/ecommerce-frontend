@@ -1,39 +1,24 @@
+import { useContext } from "react";
 import { Header } from "../components/Header";
+import { SelectListProducts } from "../components/SelectListProducts";
+import { CardProduct } from "@/components/CardProduct";
 import style from "../styles/style.module.css";
 
+import { ProductsContext } from "../contexts/products";
+
 export default function Home() {
+  const { products } = useContext(ProductsContext);
+
   return (
     <>
       <Header />
       <main className={style.mainContainer}>
-        <div className={style.listProductsContainer}>
-          <ul className={style.listSelect}>
-            <li>
-              {" "}
-              <p className={style.firstItemList}> TODOS OS PRODUTOS</p>
-            </li>
-            <li>CAMISETAS</li>
-            <li>CANECAS</li>
-          </ul>
-
-          <select className={style.select}>
-            <option className={style.option} disabled selected hidden>
-              Organizar por
-            </option>
-            <option className={style.option}>
-              <p>Novidades</p>
-            </option>
-            <option className={style.option}>
-              <p>Preço: Maior - Menor</p>
-            </option>
-            <option className={style.option}>
-              <p>Preço: Menor - Maior</p>
-            </option>
-            <option className={style.option}>
-              <p>Mais vendidos</p>
-            </option>
-          </select>
-        </div>
+        <SelectListProducts />
+        <article className={style.listProducts}>
+          {products.map((item) => (
+            <CardProduct name={item.name} price={item.price} />
+          ))}
+        </article>
       </main>
     </>
   );
