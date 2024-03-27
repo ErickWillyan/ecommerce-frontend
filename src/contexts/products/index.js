@@ -6,16 +6,17 @@ export const ProductsContext = createContext({});
 
 export function ProductsProvider({ children }) {
   const [products, setProducts] = useState([]);
+
   const camiseta = "43eca295-5ff3-4447-a812-adaad2fce7f3";
   const caneca = "285b3af4-98f1-46ce-b9ca-4f821299637f";
 
   useEffect(() => {
-    async function consult() {
+    async function initAplication() {
       const response = await listAllProductsService();
       setProducts(response.data);
     }
 
-    consult();
+    initAplication();
   }, [listAllProductsService]);
 
   async function listAllProducts() {
