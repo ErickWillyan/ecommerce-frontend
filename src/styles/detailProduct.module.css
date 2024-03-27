@@ -53,3 +53,23 @@
 .icone {
   margin-right: 10px;
 }
+
+.voltarText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgba(97, 116, 128, 1);
+}
+.voltarText p {
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 10px;
+}
+.buttonVoltar {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { FiShoppingBag } from "react-icons/fi";
 import { Header } from "../components/Header";
 import style from "@/styles/detailProduct.module.css";
@@ -8,12 +9,23 @@ export default function DetailProduct() {
   const { name, description, image, category, price } = router.query;
   console.log(name);
 
+  function buttonBack() {
+    router.push("/");
+  }
+
   return (
     <>
       <Header />
       <main className={style.mainContainer}>
-        <div>
-          <button>Voltar</button>
+        <div onClick={buttonBack} className={style.buttonVoltar}>
+          <p className={style.voltarText}>
+            <IoArrowBackCircleOutline
+              className={style.icone}
+              size={18}
+              color="rgba(97, 116, 128, 1)"
+            />
+            Voltar
+          </p>
         </div>
         <div className={style.container}>
           <img c src={`../${image}`} width={580} height={520} />
@@ -22,10 +34,7 @@ export default function DetailProduct() {
               <p>{category}</p>
               <h1>{name}</h1>
               <p className={style.priceText}>R$ {price}</p>
-              <p className={style.freteText}>
-                *Frete de R$40,00 para todo o Brasil. Grátis para compras acima
-                de R$900,00.
-              </p>
+              <p className={style.freteText}>{description}</p>
             </div>
             <div className={style.containerDescription}>
               <p>DESCRIÇÃO</p>
