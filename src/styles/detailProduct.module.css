@@ -1,0 +1,55 @@
+.mainContainer {
+  padding: 0 6%;
+}
+.container {
+  color: rgba(65, 65, 77, 1);
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.container h1 {
+  margin-top: 15px;
+  color: rgba(65, 65, 77, 1);
+  font-weight: 300;
+}
+
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 25px;
+}
+.priceText {
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.freteText {
+  font-weight: 400;
+  font-size: 12px;
+}
+.containerDescription {
+  width: 500px;
+  height: 45%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.productsContainer button {
+  display: flex;
+  height: 44px;
+  width: 448px;
+  margin: 0 auto;
+  background-color: rgba(17, 93, 140, 1);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.icone {
+  margin-right: 10px;
+}

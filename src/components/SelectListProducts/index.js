@@ -8,21 +8,13 @@ export function SelectListProducts() {
   return (
     <div className={style.listProductsContainer}>
       <ul className={style.listSelect}>
-        <li>
-          {" "}
-          <p className={style.firstItemList} onClick={listAllProducts}>
-            {" "}
-            TODOS OS PRODUTOS
-          </p>
-        </li>
+        <li onClick={listAllProducts}>TODOS OS PRODUTOS</li>
         <li onClick={listProductsCamiseta}>CAMISETAS</li>
         <li onClick={listProductsCaneca}>CANECAS</li>
       </ul>
 
       <select className={style.select}>
-        <option disabled selected hidden>
-          Organizar por
-        </option>
+        <option defaultValue>Organizar por</option>
         <option>Novidades</option>
         <option>Preço: Maior - Menor</option>
         <option>Preço: Menor - Maior</option>

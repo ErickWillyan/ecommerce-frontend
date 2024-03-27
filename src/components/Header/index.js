@@ -5,7 +5,9 @@ import { FiShoppingBag } from "react-icons/fi";
 export function Header() {
   return (
     <header className={style.containerHeader}>
-      <p class={style.logoName}>capputeeno</p>
+      <a className={style.logoName} href="/">
+        capputeeno
+      </a>
       <div className={style.sourceDiv}>
         <div className={style.sourceContainer}>
           <input

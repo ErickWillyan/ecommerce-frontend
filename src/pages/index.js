@@ -16,7 +16,7 @@ export default function Home() {
         <SelectListProducts />
         <article className={style.listProducts}>
           {products.map((item) => (
-            <CardProduct id={item.id} name={item.name} price={item.price} />
+            <CardProduct key={item.id} data={item} />
           ))}
         </article>
       </main>
