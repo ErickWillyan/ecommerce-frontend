@@ -1,6 +1,5 @@
 .cardText {
   padding: 10px;
-  height: 78px;
   font-size: 16px;
   font-weight: 300;
   font-family: "Saira", sans-serif;
@@ -14,8 +13,10 @@
   padding: 0;
   width: 256px;
   margin-bottom: 20px;
+  margin-left: 30px;
   border-radius: 4px 4px 0 0;
   background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
 }
 
 .cardProduct img {
